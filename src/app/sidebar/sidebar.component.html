@@ -1,0 +1,59 @@
+  <!-- ========== Left Sidebar Start ========== -->
+
+            <div class="left side-menu">
+                <div class="sidebar-inner slimscrollleft">
+
+                    <div class="user-details avatar">
+                        <div class="user-info">
+                            <div class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{{auth.getUser().nombres}} {{auth.getUser().apellidos}}</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="javascript:void(0)"> Logout</a></li>
+                                </ul>
+                            </div>
+
+                            <p class="text-muted m-0"><i class="fa fa-dot-circle-o text-success"></i> Online</p>
+                        </div>
+                    </div>
+                    <!--- Divider -->
+
+
+                    <div id="sidebar-menu">
+                        <ul>
+                            <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-pencil"></i> <span> Pedidos </span> <span class="pull-right"><i class="mdi mdi-plus"></i></span></a>
+                                <ul class="list-unstyled">
+                                    <li><a routerLink='/pedido'>Realizar Nuevo Pedido</a></li>
+                                    <li><a routerLink='/mis-pedidos'>Listado de Pedidos</a></li></ul>
+                            </li>
+
+                            <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-account"></i> <span> Mi Cuenta </span> <span class="pull-right"><i class="mdi mdi-plus"></i></span></a>
+                                <ul class="list-unstyled">
+                                    <li><a routerLink='/mis-datos'>Mis Datos</a></li>
+                                    <li><a routerLink='/sucursales'>Sucursales</a></li>
+                                    <!-- <li><a href="icons-fontawesome.html">Agregar Sucursal</a></li> -->
+                                </ul>
+                            </li>
+                            
+                            <!--<li class="has_sub">-->
+                            <!--<a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-share-variant"></i><span>Multi Menu </span><span class="pull-right"><i class="mdi mdi-plus"></i></span></a>-->
+                            <!--<ul>-->
+                            <!--<li class="has_sub">-->
+                            <!--<a href="javascript:void(0);" class="waves-effect"><span>Menu Item 1.1</span> <span class="pull-right"><i class="mdi mdi-plus"></i></span></a>-->
+                            <!--<ul style="">-->
+                            <!--<li><a href="javascript:void(0);"><span>Menu Item 2.1</span></a></li>-->
+                            <!--<li><a href="javascript:void(0);"><span>Menu Item 2.2</span></a></li>-->
+                            <!--</ul>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                            <!--<a href="javascript:void(0);"><span>Menu Item 1.2</span></a>-->
+                            <!--</li>-->
+                            <!--</ul>-->
+                            <!--</li>-->
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div> <!-- end sidebarinner -->
+            </div>
+            <!-- Left Sidebar End -->

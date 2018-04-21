@@ -1,0 +1,76 @@
+ <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+
+                    <div class="">
+                        <div class="page-header-title">
+                            
+                        </div>
+                    </div>
+
+                    <div class="page-content-wrapper ">
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="panel panel-primary">
+                                        <div class="panel-body">
+                                            <h4 class="m-b-30 m-t-0">Pedidos <span class="cantidad-titulo">10</span></h4>
+                                            <button type="button" class="btn btn-primary waves-effect waves-light">TODOS</button>
+                                            <button type="button" class="btn btn-primary waves-effect waves-light">PENDIENTE</button>
+                                            <button type="button" class="btn btn-primary waves-effect waves-light">CONFIRMADO POR CLIENTE</button>
+                                            <button type="button" class="btn btn-primary waves-effect waves-light"><i class="fa fa-pencil"></i> AGREGAR PRODUCTOS</button>
+                                            
+                                            <div class="clr" style="height:20px;"></div>
+                                            
+                                            <div class="row">
+                                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                                    <table id="datatable" class="table table-striped table-bordered">
+                                                        <thead>
+                                                        <tr>
+                                                            <th>Nº&nbsp;Pedido</th>
+                                                            <th>Estado</th>
+                                                            <th>Fecha</th>
+                                                            <th>Sucursal</th>
+                                                            <th>Herramientas</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        
+                                                <tr *ngFor="let pedido of pedidos.mispedidos">
+                                                    <td>{{pedido.idpedido}}</td>
+                                                    <td>
+                                                    <span class="label label-success">{{pedido.estado.nombre_estado}}</span></td>
+                                                    <td>10/01/2017</td>
+                                                    <td>{{pedido.sucursal.nombre_sucursal}}</td>
+                                                    <td>
+                                                        <div class="alinear-derecha margen"><button type="button" class="btn waves-effect btn-default"> <i class="fa fa-trash"></i> </button></div>
+                                                        <div class="alinear-derecha margen"><button type="button" class="btn waves-effect btn-default"> <i class="fa fa-pencil"></i> </button></div>
+                                                        <div class="alinear-derecha margen"><button type="button" class="btn waves-effect btn-default"> <i class="fa fa-search"></i> </button></div>
+                                                        <div class="alinear-derecha margen"><button type="button" class="btn waves-effect btn-default"> <i class="fa fa-file"></i> </button></div>
+                                                    </td>
+                                                </tr>
+                                               
+                                                
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div> <!-- End Row -->
+
+
+
+                        </div><!-- container -->
+
+                    </div> <!-- Page content Wrapper -->
+
+                </div> <!-- content -->
+
+                <footer class="footer">
+                    Macan® info@macanltda.cl&nbsp;&nbsp;&nbsp;(56 2) 2345 0501 / 2345 0502
+                </footer>
+
+            </div>

@@ -1,0 +1,99 @@
+
+<!-- Start right Content here -->
+<div class="content-page">
+	<!-- Start content -->
+	<div class="content">
+		<div class="">
+			<div class="page-header-title">
+			</div>
+		</div>
+
+		<div class="page-content-wrapper ">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel panel-primary">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="panel panel-primary">
+										<div class="panel-body">
+											<h4 class="m-t-0 m-b-30">Datos del Perfil</h4>
+
+											<div *ngIf="status=='cambiado'" class="alert alert-success" role="alert">Los datos han sido actualizados</div>
+
+											<form #registerForm="ngForm" (ngSubmit)="onSubmit()" class="form-horizontal" role="form">
+												<div class="form-group">
+													<label class="col-md-2 control-label">Nombre*</label>
+													<div class="col-md-10">
+														<input type="text" name="nombres" #nombres="ngModel" [(ngModel)]="misdatos.nombres" class="form-control" required>
+														<span *ngIf="!nombres.valid && nombres.touched">Campo Requerido</span>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-2 control-label" for="example-email">Apellido*</label>
+													<div class="col-md-10">
+														<input type="text" name="apellidos" #apellidos="ngModel" [(ngModel)]="misdatos.apellidos" class="form-control" placeholder="" required="">
+														<span *ngIf="!apellidos.valid && apellidos.touched">Campo Requerido</span>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-2 control-label">Email*</label>
+													<div class="col-md-10">
+														<input type="text" name="correo" #correo="ngModel" [(ngModel)]="misdatos.correo" class="form-control" placeholder="" required="">
+														<span *ngIf="!correo.valid && correo.touched">Campo Requerido</span>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-2 control-label">Teléfono*</label>
+													<div class="col-md-10">
+														<input type="text" name="telefono" #telefono="ngModel" [(ngModel)]="misdatos.telefono" class="form-control" placeholder="" required="">
+														<span *ngIf="!telefono.valid && telefono.touched">Campo Requerido</span>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-2 control-label">Celular*</label>
+													<div class="col-md-10">
+														<input type="text" name="celular" #celular="ngModel" [(ngModel)]="misdatos.celular" class="form-control" placeholder="" required="">
+														<span *ngIf="!celular.valid && celular.touched">Campo Requerido</span>
+													</div>
+												</div>
+												<button type="submyt" [disabled]="!registerForm.form.valid" class="btn btn-primary waves-effect waves-light boton">Actualizar Datos</button>
+											</form>
+											<div class="clr" style="height:40px;"></div>
+											<h4 class="m-t-0 m-b-30">Cambiar Clave</h4>
+											<form (ngSubmit)="actualizarContrasena()" #forma2="ngForm" class="form-horizontal" role="form">
+												<div class="form-group">
+													<label class="col-md-2 control-label" for="password">Clave Nueva* </label>
+													<div class="col-md-10">
+														<input type="password" class="form-control" [(ngModel)]="cambiocontrasena.nueva" #nueva=ngModel  name="nueva" minlength="6" required placeholder="">
+														<span class="alert text-danger" *ngIf="nueva.errors?.required && nueva.touched">Este campo es requerido</span> <span class="alert text-danger" *ngIf="nueva.errors?.minlength">Este campo requiere 6 caracteres</span>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-2 control-label" for="password">Confirmar Clave Nueva* </label>
+													<div class="col-md-10">
+														<input type="password" class="form-control" [(ngModel)]="cambiocontrasena.renueva" name="renueva" #renueva="ngModel" minlength="6" required placeholder="">
+														<span class="alert text-danger" *ngIf="renueva.errors?.required && renueva.touched">Este campo es requerido</span> 
+														<span class="alert text-danger" *ngIf="renueva.errors?.minlength">Este campo requiere 6 caracteres</span>
+													</div>
+												</div>
+												<button type="submit" [disabled]="!forma2.valid" class="btn btn-primary waves-effect waves-light boton">Actualizar Contraseña</button>
+											</form>
+										</div> <!-- panel-body -->
+									</div> <!-- panel -->
+								</div> <!-- col -->
+							</div>
+						</div>
+					</div>
+					<!-- End Row -->
+				</div>
+				<!-- container -->
+			</div> <!-- Page content Wrapper -->
+		</div> <!-- content -->
+		<footer class="footer">
+			Macan® info@macanltda.cl&nbsp;&nbsp;&nbsp;(56 2) 2345 0501 / 2345 0502
+		</footer>
+	</div>
+	<!-- End tart content -->
+</div>
+<!-- End Right content here -->
