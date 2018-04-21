@@ -45,6 +45,7 @@ export class PedidoComponent implements OnInit {
 
 
 	mipedido:Pedido={
+		idusuario:"",
 		sucursal:"",
 		despacho:"Luniben",
 		observacion:"",
@@ -52,14 +53,16 @@ export class PedidoComponent implements OnInit {
 	};
 
 	ngOnInit() {
-		
+		this.mipedido.idusuario=this.iduser;
+		console.log("iduser");
+		console.log(this.iduser);
 
 		this.Productos();
 		this.Sucursales();
 	}
 
 	onChangeSucursal(id) {
-		this.mipedido.sucursal=id;
+		
 		console.log(this.mipedido);
 	}
 

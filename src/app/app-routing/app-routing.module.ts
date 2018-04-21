@@ -8,6 +8,7 @@ import { MisDatosComponent } from './../mis-datos/mis-datos.component';
 import { MisPedidosComponent } from './../mis-pedidos/mis-pedidos.component';
 import { SucursalesComponent } from './../sucursales/sucursales.component';
 import { PedidoComponent } from './../pedido/pedido.component';
+import { Paso2Component } from './../paso2/paso2.component';
 import { AuthGuard } from './../guards/auth.guard';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { AuthGuard } from './../guards/auth.guard';
 	  { path: 'mis-pedidos', component: MisPedidosComponent, canActivate: [AuthGuard], canActivateChild: [AuthGuard], },
     { path: 'sucursales', component: SucursalesComponent, canActivate: [AuthGuard], canActivateChild: [AuthGuard], },
     { path: 'pedido', component: PedidoComponent, canActivate: [AuthGuard], canActivateChild: [AuthGuard], },
+    { path: 'verpedido/:id', component:Paso2Component, canActivate: [AuthGuard], canActivateChild: [AuthGuard], },
     { path: '', redirectTo: 'admin', pathMatch: 'full' },
     { path: 'auth/login', component: LoginComponent },
     ])

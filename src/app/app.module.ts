@@ -26,6 +26,7 @@ import { Sucursalesservice } from './_services/sucursales.services';
 import { Productosservice } from './_services/productos.services';
 import { SucursalesComponent } from './sucursales/sucursales.component';
 import { PedidoComponent } from './pedido/pedido.component';
+import { Paso2Component } from './paso2/paso2.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { PedidoComponent } from './pedido/pedido.component';
     MisPedidosComponent,
     SucursalesComponent,
     PedidoComponent,
+    Paso2Component,
   ],
   imports: [
     BrowserModule,

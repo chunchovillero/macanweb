@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  api_url: 'http://localhost/macanproyecto/api/public/api'
+  api_url: 'http://localhost/macan/macanapi/public/api'
 };
