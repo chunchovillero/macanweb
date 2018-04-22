@@ -47,7 +47,7 @@ export class PedidoComponent implements OnInit {
 	mipedido:Pedido={
 		idusuario:"",
 		sucursal:"",
-		despacho:"Luniben",
+		despacho:"1",
 		observacion:"",
 		productos: [],
 	};

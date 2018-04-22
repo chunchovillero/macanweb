@@ -23,7 +23,3 @@ export class Productosservice {
       });
   }
 }
-
-
-
-
